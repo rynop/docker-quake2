@@ -25,3 +25,7 @@ cd /opt/docker-quake2
 nohup ./q2proded +exec instagib.cfg +set dedicated 1 +set game lithium &
 nohup ./q2proded +exec ctfinstagib.cfg +set dedicated 1 +set game lithium &
 ```
+
+You can verify that UDP ports are open to the world by running:
+
+`nc -cnzu <IP> 27910`
