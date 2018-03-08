@@ -28,6 +28,20 @@ nohup ./q2proded +exec instagib.cfg +set dedicated 1 +set game lithium &
 nohup ./q2proded +exec ctfinstagib.cfg +set dedicated 1 +set game lithium &
 ```
 
-You can verify that UDP ports are open to the world by running:
+## verify that UDP ports are open to the world
 
 `nc -cnzu <IP> 27910`
+
+## Kill process
+
+Find running q2proded processes with: `ps auxww | grep -i q2proded`
+
+Kill the process with: `kill <process id from previous command>`
+
+## Pulling updates from repo
+
+```
+cd /opt/docker-quake2
+git pull
+```
+
