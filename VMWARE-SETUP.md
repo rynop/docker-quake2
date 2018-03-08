@@ -22,7 +22,7 @@ sudo cp ctfinstagib.cfg ctf.cfg
 
 Now modify your `hostname` values in `baseq2/normal.cfg` and `baseq2/ctf.cfg`
 
-When you want to start the q2 server run the following.  Note the instagib.cfg server listens on UDP port 27910 and ctfinstagib.cfg listens on 27999
+When you want to start the q2 server run the following.  Note the normal.cfg server listens on UDP port 27910 and ctf.cfg listens on 27999
 
 ```
 sudo su - quake2
