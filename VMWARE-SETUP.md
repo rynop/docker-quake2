@@ -48,3 +48,5 @@ cd /opt/docker-quake2
 git pull
 ```
 
+Now kill the existing processes and restart them.
+
