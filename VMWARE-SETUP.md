@@ -4,7 +4,6 @@ Create VMWare VM, install ubuntu 17.10 server.  Make sure to setup bridged netwo
 
 ## Inside the Ubuntu VM do the following:
 
-1.  Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 1.  Inside the VM run the following:
 
 ```
@@ -17,7 +16,7 @@ sudo chmod u+x /opt/docker-quake2/q2proded
 sudo ufw allow 27910; sudo ufw allow 27999
 ```
 
-3.  When you want to start the q2 server run:
+2.  When you want to start the q2 server run:
 ```
 cd /opt/docker-quake2
 //instagib server listens on port 27910
