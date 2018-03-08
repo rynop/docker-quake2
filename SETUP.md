@@ -7,6 +7,8 @@
 1.  Optional - create docker CTF container: 
     1.  `git checkout ctf`
     1.  `docker build --rm -t quake2/ctf .`
+1.  Open firewall: 
+    *  Ubuntu: `sudo ufw allow 27910; sudo ufw allow 27999`
 1.  Start servers: 
     *  Instagib: `sudo docker run --network=bridge -d -p 27910:27910/udp quake2/instagib`
     *  CTF: `sudo docker run --network=bridge -d -p 27999:27910/udp quake2/ctf`
