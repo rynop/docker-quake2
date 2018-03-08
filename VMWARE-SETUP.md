@@ -23,8 +23,10 @@ sudo ufw allow 27910; sudo ufw allow 27999
 ```
 sudo su - quake2
 cd /opt/docker-quake2
-//instagib server listens on port 27910
+
+#instagib server listens on port 27910
 nohup ./q2proded +exec instagib.cfg +set dedicated 1 +set game lithium &
-//CTF instagib server listens on port 27999
+
+#CTF instagib server listens on port 27999
 nohup ./q2proded +exec ctfinstagib.cfg +set dedicated 1 +set game lithium &
 ```
