@@ -17,6 +17,8 @@ sudo chmod u+x /opt/docker-quake2/q2proded
 sudo ufw allow 27910; sudo ufw allow 27999
 ```
 
+Now modify your `hostname` values in `baseq2/instagib.cfg` and `baseq2/ctfinstagib.cfg`
+
 When you want to start the q2 server run the following.  Note the instagib.cfg server listens on UDP port 27910 and ctfinstagib.cfg listens on 27999
 
 ```
