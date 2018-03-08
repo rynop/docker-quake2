@@ -15,17 +15,20 @@ sudo wget http://skuller.net/q2pro/nightly/q2pro-server_linux_amd64.tar.gz -O- |
 sudo chown -R quake2:quake2 /opt/docker-quake2
 sudo chmod u+x /opt/docker-quake2/q2proded
 sudo ufw allow 27910; sudo ufw allow 27999
+cd /opt/docker-quake2/baseq2
+sudo cp instagib.cfg normal.cfg
+sudo cp ctfinstagib.cfg ctf.cfg
 ```
 
-Now modify your `hostname` values in `baseq2/instagib.cfg` and `baseq2/ctfinstagib.cfg`
+Now modify your `hostname` values in `baseq2/normal.cfg` and `baseq2/ctf.cfg`
 
 When you want to start the q2 server run the following.  Note the instagib.cfg server listens on UDP port 27910 and ctfinstagib.cfg listens on 27999
 
 ```
 sudo su - quake2
 cd /opt/docker-quake2
-nohup ./q2proded +exec instagib.cfg +set dedicated 1 +set game lithium &
-nohup ./q2proded +exec ctfinstagib.cfg +set dedicated 1 +set game lithium &
+nohup ./q2proded +exec normal.cfg +set dedicated 1 +set game lithium &
+nohup ./q2proded +exec ctf.cfg +set dedicated 1 +set game lithium &
 ```
 
 ## verify that UDP ports are open to the world
