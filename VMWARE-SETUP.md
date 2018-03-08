@@ -4,8 +4,6 @@ Create VMWare VM, install ubuntu 17.10 server.  Make sure to setup bridged netwo
 
 ## Inside the Ubuntu VM do the following:
 
-1.  Inside the VM run the following:
-
 ```
 useradd -m -s /bin/bash quake2
 sudo mkdir -p /opt/
@@ -19,7 +17,8 @@ sudo chmod u+x /opt/docker-quake2/q2proded
 sudo ufw allow 27910; sudo ufw allow 27999
 ```
 
-2.  When you want to start the q2 server run:
+When you want to start the q2 server run the following.  Note the instagib.cfg server listens on UDP port 27910 and ctfinstagib.cfg listens on 27999
+
 ```
 sudo su - quake2
 cd /opt/docker-quake2
