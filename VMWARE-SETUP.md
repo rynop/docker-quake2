@@ -20,5 +20,8 @@ sudo ufw allow 27910; sudo ufw allow 27999
 3.  When you want to start the q2 server run:
 ```
 cd /opt/docker-quake2
-./q2proded +exec server.cfg +set dedicated 1 +set game lithium
+//instagib server listens on port 27910
+nohup ./q2proded +exec instagib.cfg +set dedicated 1 +set game lithium &
+//CTF instagib server listens on port 27999
+nohup ./q2proded +exec ctfinstagib.cfg +set dedicated 1 +set game lithium &
 ```
