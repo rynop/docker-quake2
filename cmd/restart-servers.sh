@@ -7,3 +7,18 @@ fi
 
 pkill q2proded
 
+cd /opt/docker-quake2
+git pull
+
+
+cd /opt/docker-quake2/baseq2
+cp -f ../server-configs/lith* .
+cp -f ../server-configs/procket.cfg .
+
+su - quake2
+cd /opt/docker-quake2
+nohup ./q2proded +exec lith.cfg +set dedicated 1 +set game lithium &
+nohup ./q2proded +exec lith-ctf.cfg +set dedicated 1 +set game lithium &
+nohup ./q2proded +exec lith-ctf-instagib.cfg +set dedicated 1 +set game lithium &
+nohup ./q2proded +exec lith-instagib.cfg +set dedicated 1 +set game lithium &
+nohup ./q2proded +exec procket.cfg +set dedicated 1 +set game lithium &
