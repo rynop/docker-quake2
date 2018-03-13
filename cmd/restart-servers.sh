@@ -17,6 +17,7 @@ cp -f ../server-configs/procket.cfg .
 
 su - quake2
 cd /opt/docker-quake2
+pwd
 nohup ./q2proded +exec lith.cfg +set dedicated 1 +set game lithium &
 nohup ./q2proded +exec lith-ctf.cfg +set dedicated 1 +set game lithium &
 nohup ./q2proded +exec lith-ctf-instagib.cfg +set dedicated 1 +set game lithium &
