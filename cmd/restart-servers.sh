@@ -14,6 +14,12 @@ cd /opt/docker-quake2/baseq2
 cp -f ../server-configs/lith* .
 cp -f ../server-configs/procket.cfg .
 
+ufw allow 27910
+ufw allow 27911
+ufw allow 27912
+ufw allow 27913
+ufw allow 27914
+
 su quake2 -c "cd /opt/docker-quake2; nohup ./q2proded +exec lith.cfg +set dedicated 1 +set game lithium >/dev/null 2>&1 &"
 su quake2 -c "cd /opt/docker-quake2; nohup ./q2proded +exec lith-ctf.cfg +set dedicated 1 +set game lithium >/dev/null 2>&1 &"
 su quake2 -c "cd /opt/docker-quake2; nohup ./q2proded +exec lith-ctf-instagib.cfg +set dedicated 1 +set game lithium >/dev/null 2>&1 &"
