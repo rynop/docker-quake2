@@ -19,10 +19,12 @@ ufw allow 27911
 ufw allow 27912
 ufw allow 27913
 ufw allow 27914
+ufw allow 27915
 
 su quake2 -c "cd /opt/docker-quake2; nohup ./q2proded +exec lith.cfg +set dedicated 1 +set game lithium >/dev/null 2>&1 &"
-su quake2 -c "cd /opt/docker-quake2; nohup ./q2proded +exec lith-ctf.cfg +set dedicated 1 +set game lithium >/dev/null 2>&1 &"
+# su quake2 -c "cd /opt/docker-quake2; nohup ./q2proded +exec lith-ctf.cfg +set dedicated 1 +set game lithium >/dev/null 2>&1 &"
 # su quake2 -c "cd /opt/docker-quake2; nohup ./q2proded +exec lith-ctf-instagib.cfg +set dedicated 1 +set game lithium >/dev/null 2>&1 &"
+su quake2 -c "cd /opt/docker-quake2; nohup ./q2proded +exec lith-instagib-q2dm1.cfg +set dedicated 1 +set game lithium >/dev/null 2>&1 &"
 su quake2 -c "cd /opt/docker-quake2; nohup ./q2proded +exec lith-instagib.cfg +set dedicated 1 +set game lithium >/dev/null 2>&1 &"
 # su quake2 -c "cd /opt/docker-quake2; nohup ./q2proded +exec rocket-pro.cfg +set dedicated 1 +set game lithium >/dev/null 2>&1 &"
 
